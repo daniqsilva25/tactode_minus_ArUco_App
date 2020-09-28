@@ -1,0 +1,32 @@
+{
+  "name": "tactode_minus_aruco",
+  "version": "1.0.0",
+  "description": "Tactode's computer vision algorithm that performs 2D segmentation and classification of tiles in an image",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd src && node main.js debug/img_1.jpg",
+    "debug": "cd src && node main.js debug/img_1.jpg debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniqsilva25/tactode_minus_ArUco.git"
+  },
+  "keywords": [
+    "Computer Vision",
+    "Machine Learning",
+    "Robotics",
+    "Tactode"
+  ],
+  "author": "Daniel Queirós da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniqsilva25/tactode_minus_ArUco/issues"
+  },
+  "homepage": "https://github.com/daniqsilva25/tactode_minus_ArUco#readme",
+  "dependencies": {
+    "opencv4nodejs": "^5.6.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.4"
+  }
+}
