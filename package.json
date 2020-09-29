@@ -4,8 +4,9 @@
   "description": "Tactode's computer vision algorithm that performs 2D segmentation and classification of tiles in an image",
   "main": "index.js",
   "scripts": {
-    "test": "cd src && node main.js debug/img_1.jpg",
-    "debug": "cd src && node main.js debug/img_1.jpg debug"
+    "test": "cd src && node main.js HOGSVM debug/img_1.jpg",
+    "debug": "cd src && node main.js HOGSVM debug/img_1.jpg debug",
+    "verify-std": "cd src && npx standard *.js"
   },
   "repository": {
     "type": "git",
