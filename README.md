@@ -13,8 +13,16 @@ Start by cloning the repo: `git clone https://github.com/daniqsilva25/tactode_mi
 Install app dependencies: `npm install`
 
 ## Usage
+### Running pre-defined scripts
 Run a pre-defined test script without debug (does not save the resulting image): `npm test`
 
 Run a pre-defined test script with debug (saves the resulting image): `npm debug`
 
 Run a pre-defined JavaScript standard verification script: `npm verify-std`
+
+### Running custom scripts
+`node main.js [image] [debug]`
+
+**Arguments explanation**
+- *image*: image path for running the algorithm
+- *debug*: with debug ('_debug_') or without debug (empty space)
