@@ -63,14 +63,13 @@ function showResult (src = new cv.Mat(), tilesArr = [], debug = false) {
       src.putText(tile.tactode.piece, new cv.Point2(x, y), 2, 1.2, color, cv.LINE_4, 6)
     })
   })
-  cv.imshow("result", src.rescale(0.3))
-  cv.waitKey(5000) // wait 5000 ms or click any key to close the window 
+  cv.imshow('result', src.rescale(0.3))
+  cv.waitKey(5000) // Wait 5000 ms or click any key to close the window
   cv.destroyAllWindows()
   if (debug) {
-    cv.imwrite(path.join(debugFolder, "result.jpg"), src)
+    cv.imwrite(path.join(debugFolder, 'result.jpg'), src)
   }
 }
-
 
 function printResult (tiles = [], numberOfTiles = -1) {
   const numTiles = numberOfTiles

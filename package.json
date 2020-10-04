@@ -2,10 +2,10 @@
   "name": "tactode_minus_aruco_app",
   "version": "1.0.0",
   "description": "Tactode's computer vision algorithm that performs 2D segmentation and classification of tiles in an image",
-  "main": "main.js",
+  "main": "tactode_cv_alg.js",
   "scripts": {
-    "test": "node main.js test_imgs/img_1.jpg",
-    "debug": "node main.js test_imgs/img_1.jpg debugOn",
+    "test": "node usage.js test_imgs/img_1.jpg",
+    "debug": "node usage.js test_imgs/img_1.jpg debugOn",
     "verify-std": "npx standard *.js"
   },
   "repository": {

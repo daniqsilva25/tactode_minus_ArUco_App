@@ -21,13 +21,13 @@ Run a pre-defined test script with debug (saves the resulting image): `npm debug
 Run a pre-defined JavaScript standard verification script: `npm verify-std`
 
 ### Running custom scripts
-`node main.js [image] [debug]`
+`node usage.js [image] [debug]`
 
 **Arguments explanation**
 - *image*: image path for running the algorithm
 - *debug*: with debug ('_debugOn_') or without debug (empty space)
 
 **Examples**
-- `node main.js test_imgs/img_6.jpg`
-- `node main.js test_imgs/img_3.jpg debugOn`
+- `node usage.js test_imgs/img_6.jpg`
+- `node usage.js test_imgs/img_3.jpg debugOn`
 
