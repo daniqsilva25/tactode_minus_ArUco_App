@@ -10,7 +10,7 @@ Computer vision algorithm developed in JavaScript/Node.js that performs 2D segme
 ## Installation
 Start by cloning the repo: `git clone https://github.com/daniqsilva25/tactode_minus_ArUco_App`
 
-Install app dependencies: `npm install`
+Install app dependencies: `cd tactode_minus_ArUco_App && npm install`
 
 ## Usage
 ### Running pre-defined scripts
