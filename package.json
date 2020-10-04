@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "test": "node main.js test_imgs/img_1.jpg",
-    "debug": "node main.js test_imgs/img_1.jpg debug",
+    "debug": "node main.js test_imgs/img_1.jpg debugOn",
     "verify-std": "npx standard *.js"
   },
   "repository": {
@@ -19,7 +19,7 @@
     "Tactode"
   ],
   "author": "Daniel Queirós da Silva",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/daniqsilva25/tactode_minus_ArUco_App/issues"
   },
