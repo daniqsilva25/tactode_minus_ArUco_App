@@ -13,14 +13,14 @@ Start by cloning the repo: `git clone https://github.com/daniqsilva25/tactode_mi
 Install app dependencies: `cd tactode_minus_ArUco_App && npm install`
 
 ## Scripts explained
-- _tactode_cv_alg.js_: this is the main script containing the computer vision algorithm for segmenting and classifying tiles
-- _params.js_: this is an auxiliary script containing global classes and functions
-- _usage.js_: this is a script that exemplifies how to use the **main** script and its returning values
+- [_tactode_cv_alg.js_](https://github.com/daniqsilva25/tactode_minus_ArUco_App/blob/master/tactode_cv_alg.js): this is the **main** script containing the computer vision algorithm for segmenting and classifying tiles
+- [_params.js_](https://github.com/daniqsilva25/tactode_minus_ArUco_App/blob/master/params.js): this is an auxiliary script containing global classes and functions
+- [_usage.js_](https://github.com/daniqsilva25/tactode_minus_ArUco_App/blob/master/usage.js): this is a script that exemplifies how to use the **main** script and its returning values
 
 ## Folders explained
-- _/debug_: folder contaning the debug images
-- _/test_imgs_: folder containing the test images
-- _/trained_models_: folder containing configurations of HOGs, trained SVM models and a .txt file containing the definition of the tiles classes
+- [_/debug_](https://github.com/daniqsilva25/tactode_minus_ArUco_App/tree/master/debug): folder contaning the debug images
+- [_/test_imgs_](https://github.com/daniqsilva25/tactode_minus_ArUco_App/tree/master/test_imgs): folder containing the test images
+- [_/trained_models_](https://github.com/daniqsilva25/tactode_minus_ArUco_App/tree/master/trained_models): folder containing configurations of HOGs, trained SVM models and a .txt file containing the definition of the tiles classes
 
 ## Usage
 ### Running pre-defined scripts
