@@ -455,7 +455,7 @@ function run (img = '', debug = false, td = new params.HOGSVM4detection(), tc = 
     console.log('ERROR: Invalid ROI found!')
     return -1
   }
-  return { rectsArr, numTiles }
+  return { src, rectsArr, numTiles }
 }
 
 module.exports = { run }

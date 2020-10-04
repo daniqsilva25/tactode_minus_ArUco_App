@@ -1,5 +1,6 @@
 const fs = require('fs')
 const cv = require('opencv4nodejs')
+const path = require('path')
 
 // GLOBAL VARS
 const debugFolder = 'debug'
@@ -52,6 +53,25 @@ class HOGSVM {
 }
 
 // FUNCTIONS
+function showResult (src = new cv.Mat(), tilesArr = [], debug = false) {
+  tilesArr.forEach(row => {
+    row.forEach(tile => {
+      const x = tile.rect.x
+      const y = tile.rect.y
+      const color = new cv.Vec3(255 * Math.random(), 255 * Math.random(), 255 * Math.random())
+      src.drawRectangle(tile.rect, color, 6)
+      src.putText(tile.tactode.piece, new cv.Point2(x, y), 2, 1.2, color, cv.LINE_4, 6)
+    })
+  })
+  cv.imshow("result", src.rescale(0.3))
+  cv.waitKey(5000) // wait 5000 ms or click any key to close the window 
+  cv.destroyAllWindows()
+  if (debug) {
+    cv.imwrite(path.join(debugFolder, "result.jpg"), src)
+  }
+}
+
+
 function printResult (tiles = [], numberOfTiles = -1) {
   const numTiles = numberOfTiles
   let resultStr = ` Number of tiles found: ${numTiles}\n\n `
@@ -75,4 +95,4 @@ function getCurrentTime () {
   return `${dayOfMonth}/${month}/${year} ${hours}:${minutes}:${seconds}`
 }
 
-module.exports = { debugFolder, HOGSVM4detection, HOGSVM, printResult, getCurrentTime }
+module.exports = { debugFolder, HOGSVM4detection, HOGSVM, printResult, showResult, getCurrentTime }

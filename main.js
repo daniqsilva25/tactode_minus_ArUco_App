@@ -20,8 +20,10 @@ tc.loadFiles()
 const res = tactode.run(img, debug, td, tc)
 
 if (res !== -1) {
-  // Show result
+  // Print result
   params.printResult(res.rectsArr, res.numTiles)
+  // Show result
+  params.showResult(res.src, res.rectsArr, debug)
 }
 
 console.log(`\nfinished: ${params.getCurrentTime()}\n+++`)
