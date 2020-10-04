@@ -25,4 +25,4 @@ Run a pre-defined JavaScript standard verification script: `npm verify-std`
 
 **Arguments explanation**
 - *image*: image path for running the algorithm
-- *debug*: with debug ('_debug_') or without debug (empty space)
+- *debug*: with debug ('_debugOn_') or without debug (empty space)

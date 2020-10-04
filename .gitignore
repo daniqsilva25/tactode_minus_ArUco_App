@@ -102,15 +102,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-# Debug image files
-src/debug/img_b*
-src/debug/img_c*
-src/debug/img_r*
-
-# Python Virtual Environment
-**/venv
-
-# Ignore for now other models
-**/models/M*
-**/models/V*

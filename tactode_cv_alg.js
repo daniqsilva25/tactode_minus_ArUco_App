@@ -96,7 +96,7 @@ const newTile = (rect = new cv.Rect()) => {
 }
 
 // MAIN FUNCTION
-function run (img = '', debug = false, d = new params.HOGSVM4detection()) {
+function run (img = '', debug = false, td = new params.HOGSVM4detection(), tc = new params.HOGSVM()) {
   // -> Beginning
   const debugFolder = params.debugFolder
   let src = cv.imread(img)
@@ -250,9 +250,9 @@ function run (img = '', debug = false, d = new params.HOGSVM4detection()) {
       const y = c.rect.y + 2 * height
       height = Math.round(width / 2)
       const roi = src.getRegion(new cv.Rect(x, y, width, height))
-        .resize(d.size.height, d.size.width, 0, 0, cv.INTER_AREA)
-      const descriptors = d.hog.compute(roi)
-      const prediction = d.svm.predict(descriptors)
+        .resize(td.size.height, td.size.width, 0, 0, cv.INTER_AREA)
+      const descriptors = td.hog.compute(roi)
+      const prediction = td.svm.predict(descriptors)
       c.haveTeeth = (prediction === 1)
     }
 
@@ -429,7 +429,33 @@ function run (img = '', debug = false, d = new params.HOGSVM4detection()) {
     const mat = drawRects(rectsArr, src.copy(src))
     cv.imwrite(path.join(debugFolder, 'img_rects.jpg'), mat)
   }
-  return { src, rectsArr, invalidRoiFound }
+  let numTiles = 0
+  if (!invalidRoiFound) {
+    rectsArr.forEach(line => {
+      line.forEach(tile => {
+        const roi = src.getRegion(tile.rect)
+        const resized = roi.resize(
+          tc.size,
+          tc.size,
+          0, 0, cv.INTER_AREA
+        )
+        const descriptors = tc.hog.compute(resized)
+        const prediction = tc.svm.predict(descriptors)
+        const typeIndex = Math.floor(prediction / 100)
+        const pieceIndex = prediction % 100
+        const classLine = tc.classes[typeIndex].split(':')
+        const type = classLine[0]
+        const piece = classLine[1].split(',')[pieceIndex]
+        tile.tactode.type = type
+        tile.tactode.piece = piece
+        numTiles++
+      })
+    })
+  } else {
+    console.log('ERROR: Invalid ROI found!')
+    return -1
+  }
+  return { rectsArr, numTiles }
 }
 
 module.exports = { run }

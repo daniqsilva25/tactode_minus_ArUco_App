@@ -7,8 +7,8 @@ const debugFolder = 'debug'
 // CLASSES
 class HOGSVM4detection {
   constructor (
-    hogFile = 'dependencies/hog_detector.yaml',
-    svmFile = 'dependencies/svm_detector.yaml',
+    hogFile = 'trained_models/hog_detector.yaml',
+    svmFile = 'trained_models/svm_detector.yaml',
     w = 64, h = 32,
     hog = new cv.HOGDescriptor(),
     svm = new cv.SVM()) {
@@ -30,9 +30,9 @@ class HOGSVM4detection {
 
 class HOGSVM {
   constructor (
-    hogFile = 'models/HOGSVM/hog_classifier.yaml',
-    svmFile = 'models/HOGSVM/svm_classifier.yaml',
-    classesFile = 'models/HOGSVM/classes.txt',
+    hogFile = 'trained_models/hog_classifier.yaml',
+    svmFile = 'trained_models/svm_classifier.yaml',
+    classesFile = 'trained_models/classes.txt',
     size = 32,
     hog = new cv.HOGDescriptor(),
     svm = new cv.SVM()) {
