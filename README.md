@@ -27,5 +27,7 @@ Run a pre-defined JavaScript standard verification script: `npm verify-std`
 - *image*: image path for running the algorithm
 - *debug*: with debug ('_debugOn_') or without debug (empty space)
 
-**Example**
-`node main.js test_imgs/img_6.jpg debugOn`
+**Examples**
+- `node main.js test_imgs/img_6.jpg`
+- `node main.js test_imgs/img_3.jpg debugOn`
+
