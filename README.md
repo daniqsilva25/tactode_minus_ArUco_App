@@ -1,5 +1,5 @@
 # Node.js app for Tactode without ArUco markers
-Computer vision algorithm developed in JavaScript/Node.js that performs 2D segmentation and classification of Tactode tiles in an image.
+Computer vision algorithm developed in JavaScript/Node.js that performs segmentation and 2D recognition of Tactode tiles in an image. This work was developed during a M.Sc. thesis named "Computer Vision System for Tactode Programming". The document is available [here](https://www.researchgate.net/publication/348621971_Computer_Vision_System_for_Tactode_Programming).
 
 ## Necessary tools
 *Ubuntu*
